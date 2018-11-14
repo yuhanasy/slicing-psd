@@ -42,6 +42,13 @@ html {
   line-height: 28px;
 }
 
+.f6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 28px;
+}
+
 .f-gradient-orange {  
   background: -webkit-linear-gradient(135deg, #ff5e49ee, #ff961f);
   -webkit-background-clip: text;
@@ -89,11 +96,18 @@ html {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .btn {
   margin: 40px 20px;
   padding: 12px 36px;
   border: none;
   border-radius: 100px;
+  outline: none;
+  cursor: pointer;
 }
 
 .btn-box {
@@ -159,11 +173,38 @@ section {
   margin-bottom: 20px;
 }
 
+.card:last-of-type > .thumbnail {
+  background-color: #e9e9ea;
+  color: #bdbdc0;
+  font-size: 72px;
+}
+
 .thumbnail {
+  position: relative;
   box-sizing: border-box;
   width: 350px;
   height: 250px;
   background: #232330;
+  cursor: pointer;
+}
+
+.thumbnail-img {
+  width: 100%;
+}
+
+.thumbnail:hover .overlay {
+  opacity: .9;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 350px;
+  height: 250px;
+  background: linear-gradient(-20deg, #ff5e49 0%, #ff961f 100%);
+  opacity: 0;
 }
 
 footer {
@@ -173,5 +214,5 @@ footer {
 }
 
 footer div {
-  flex-basis: 1fr;
+  /* flex-basis: 1fr; */
 }
